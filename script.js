@@ -1,18 +1,33 @@
-$(document).ready(function() {
-  // loadImages();
+/*
+TODO:
+ - random coordinates
+ - random number generator
+*/
 
-  // Math.floor(Math.random()*10);
+$(document).ready(function() {
+  loadImages();
+
+  var img = document.createElement("img");
+  img.setAttribute('src', "img/dog02.jpg");
 
   $('.image-button').click(function() {
-    $(this).after("hi").css("background", "red");
+    $(this).after("hi");
+    $(this).after(img);
   });
 
 });
 
-// function loadImages() {
-//   var images = new Array();
-//
-//   for (var i=0; i<50; i++) {
-//     images.push("img/dog0"+(i+2)+".jpg");
-//   }
-// }
+function loadImages() {
+  var images = new Array();
+
+  for (var i=0; i<3; i++) {
+    images.push("img/dog0"+(i+2)+".jpg");
+  }
+
+  console.log(images.length);
+}
+
+function randomImage(a) {
+  var randomNum = Math.floor(Math.random()*(a.length));
+  console.log(randomNum);
+}

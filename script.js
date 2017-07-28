@@ -1,5 +1,18 @@
-var react_count = 0;
+$(document).ready(function() {
+  // loadImages();
 
-function add_react() {
-  react_count += 1;
-}
+  // Math.floor(Math.random()*10);
+
+  $('.image-button').click(function() {
+    $(this).after("hi").css("background", "red");
+  });
+
+});
+
+// function loadImages() {
+//   var images = new Array();
+//
+//   for (var i=0; i<50; i++) {
+//     images.push("img/dog0"+(i+2)+".jpg");
+//   }
+// }

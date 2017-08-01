@@ -2,15 +2,14 @@ body {
   font-family: "Courier New", serif;
   color: #fff;
   background-color: #d5b3e0;
+  text-align: center;
 }
 
 h1 {
-  text-align: center;
   font-size: 61px;
 }
 
 .image-button {
-  text-align: center;
   margin-top: 150px;
 }
 
@@ -29,4 +28,8 @@ h1 {
   background-color: #fff;
   color: #d5b3e0;
   font-weight: 600;
+}
+
+.dog-image {
+  margin-top: 30px;
 }

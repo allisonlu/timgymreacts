@@ -10,7 +10,7 @@ h1 {
 }
 
 .image-button {
-  margin-top: 150px;
+  margin-top: 60px;
 }
 
 .image-button button {
@@ -32,4 +32,8 @@ h1 {
 
 .dog-image {
   margin-top: 30px;
+}
+
+.dog-image img {
+  width: 400px;
 }

@@ -2,19 +2,13 @@
 TODO:
  - generate new image every time button is clicked
  - random coordinates
+ - getting random number twice
 */
 
 $(document).ready(function() {
 
-  var random_doge = randomImage(loadImages());
-  console.log("random dog: " + random_doge);
-
-  var img = document.createElement("img");
-  img.setAttribute('src', random_doge);
-  $(img).addClass("dog-image");
-
   $('.image-button').click(function() {
-    $(this).append(img);
+    getDog();
   });
 
 });
@@ -24,8 +18,9 @@ $(document).ready(function() {
 function loadImages() {
   var images = new Array();
 
-  for (var i=1; i<=4; i++) {
-    images.push("img/dog0"+(i)+".jpg");
+  // make upper bound dynamic
+  for (var i=2; i<=10; i++) {
+    images.push("img/dog-"+(i)+".jpg");
   }
 
   return images;
@@ -37,4 +32,10 @@ function loadImages() {
 */
 function randomImage(a) {
   return a[Math.floor(Math.random()*(a.length))];
+}
+
+function getDog() {
+    var random_doge = randomImage(loadImages());
+    console.log("random dog: " + random_doge);
+    $('.dog-image').html("<img src='" + random_doge + "'>");
 }
